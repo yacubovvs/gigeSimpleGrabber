@@ -2,6 +2,7 @@
 GigE Simple grabber
 ____
 
+### English
 Simple tool fot getting image from GigE Cameras as Cognex or Basler in terminal.
 !Save all files as PNG
 
@@ -21,7 +22,7 @@ Example:
 SimpleGrab.exe 22846677 "C:\Users\v.yakubov\Documents\grabber\out.png"
 ```
 ____
-
+### Русский
 Простая утилита для получения изображения с камер с интерфейсовм GigE (таких как Basler или Cognex) через командную строку.
 !Сохраняет все файлы в формате png
 
