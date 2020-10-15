@@ -1,0 +1,14 @@
+C:\Program Files\Basler\pylon 6\Development\Samples\C#\PylonC.NET\bin\Release\SimpleGrab.exe
+C:\Program Files\Basler\pylon 6\Development\Samples\C#\PylonC.NET\bin\Release\SimpleGrab.pdb
+C:\Program Files\Basler\pylon 6\Development\Samples\C#\PylonC.NET\SimpleGrab\obj\Release\SimpleGrab.csproj.CopyComplete
+C:\Program Files\Basler\pylon 6\Development\Samples\C#\PylonC.NET\SimpleGrab\obj\Release\SimpleGrab.exe
+C:\Program Files\Basler\pylon 6\Development\Samples\C#\PylonC.NET\SimpleGrab\obj\Release\SimpleGrab.pdb
+C:\Program Files\Basler\pylon 6\Development\Samples\C#\PylonC.NET\SimpleGrab\obj\Release\SimpleGrab.csprojAssemblyReference.cache
+C:\Users\v.yakubov\SimpleBaslerGraber\bin\Release\SimpleGrab.exe
+C:\Users\v.yakubov\SimpleBaslerGraber\bin\Release\SimpleGrab.pdb
+C:\Users\v.yakubov\SimpleBaslerGraber\bin\Release\PylonC.NET.dll
+C:\Users\v.yakubov\SimpleBaslerGraber\bin\Release\PylonC.NET.xml
+C:\Users\v.yakubov\SimpleBaslerGraber\obj\Release\SimpleGrab.csprojAssemblyReference.cache
+C:\Users\v.yakubov\SimpleBaslerGraber\obj\Release\SimpleGrab.csproj.CopyComplete
+C:\Users\v.yakubov\SimpleBaslerGraber\obj\Release\SimpleGrab.exe
+C:\Users\v.yakubov\SimpleBaslerGraber\obj\Release\SimpleGrab.pdb
