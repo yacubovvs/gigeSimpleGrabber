@@ -21,13 +21,33 @@ namespace SimpleGrab
 {
     class SimpleGrab
     {
+
+        static string arg_cameraSerialNumber   = "";
+        static string arg_pathToFile           = "";
+        static string arg_imageFirmat          = "PNG";
+
         static void Main(string[] args)
         {
-            if (args.Length != 2){
+            if (args.Length == 2) {
+                arg_cameraSerialNumber  = args[0];
+                arg_pathToFile          = args[1];
+            }
+            else if(args.Length == 3)
+            {
+                arg_imageFirmat         = args[0];
+                arg_cameraSerialNumber  = args[1];
+                arg_pathToFile          = args[2];
+            }
+            else
+            {
                 Console.WriteLine("Wrong parameters:");
-                Console.WriteLine("[camera serial number] [path to file]");
+                Console.WriteLine("[camera serial number] [path to file PNG]");
+                Console.WriteLine("or");
+                Console.WriteLine("[BMP|PNG|JPG|RAW|TIFF] [camera serial number] [path to file]");
                 return;
             }
+
+
 
             PYLON_DEVICE_HANDLE hDev = new PYLON_DEVICE_HANDLE(); /* Handle for the pylon device. */
             try
@@ -51,7 +71,7 @@ namespace SimpleGrab
                     PYLON_DEVICE_INFO_HANDLE hDi = Pylon.GetDeviceInfoHandle((uint)di);
                     string serial = Pylon.DeviceInfoGetPropertyValueByName(hDi, Pylon.cPylonDeviceInfoSerialNumberKey);
                     deviceNum = di;
-                    if (serial.Equals(args[0])) {
+                    if (serial.Equals(arg_cameraSerialNumber)) {
                         deviceFound = true;
                         break;
                     }
@@ -121,7 +141,13 @@ namespace SimpleGrab
 
                     /* Display image */
                     //Pylon.ImagePersistenceSave<Byte>(EPylonImageFileFormat.ImageFileFormat_Png, "C:\\Users\\v.yakubov\\grabber\\test.png", imgBuf, grabResult.PixelType, (uint)grabResult.SizeX, (uint)grabResult.SizeY, 0, EPylonImageOrientation.ImageOrientation_TopDown);
-                    Pylon.ImagePersistenceSave<Byte>(EPylonImageFileFormat.ImageFileFormat_Png, args[1], imgBuf, grabResult.PixelType, (uint)grabResult.SizeX, (uint)grabResult.SizeY, 0, EPylonImageOrientation.ImageOrientation_TopDown);
+                    if(arg_imageFirmat.Equals("PNG")) Pylon.ImagePersistenceSave<Byte>(EPylonImageFileFormat.ImageFileFormat_Png, arg_pathToFile, imgBuf, grabResult.PixelType, (uint)grabResult.SizeX, (uint)grabResult.SizeY, 0, EPylonImageOrientation.ImageOrientation_TopDown);
+                    else if (arg_imageFirmat.Equals("JPG")) Pylon.ImagePersistenceSave<Byte>(EPylonImageFileFormat.ImageFileFormat_Jpeg, arg_pathToFile, imgBuf, grabResult.PixelType, (uint)grabResult.SizeX, (uint)grabResult.SizeY, 0, EPylonImageOrientation.ImageOrientation_TopDown);
+                    else if (arg_imageFirmat.Equals("RAW")) Pylon.ImagePersistenceSave<Byte>(EPylonImageFileFormat.ImageFileFormat_Raw, arg_pathToFile, imgBuf, grabResult.PixelType, (uint)grabResult.SizeX, (uint)grabResult.SizeY, 0, EPylonImageOrientation.ImageOrientation_TopDown);
+                    else if (arg_imageFirmat.Equals("TIFF")) Pylon.ImagePersistenceSave<Byte>(EPylonImageFileFormat.ImageFileFormat_Tiff, arg_pathToFile, imgBuf, grabResult.PixelType, (uint)grabResult.SizeX, (uint)grabResult.SizeY, 0, EPylonImageOrientation.ImageOrientation_TopDown);
+                    else if (arg_imageFirmat.Equals("BMP")) Pylon.ImagePersistenceSave<Byte>(EPylonImageFileFormat.ImageFileFormat_Bmp, arg_pathToFile, imgBuf, grabResult.PixelType, (uint)grabResult.SizeX, (uint)grabResult.SizeY, 0, EPylonImageOrientation.ImageOrientation_TopDown);
+                    else Pylon.ImagePersistenceSave<Byte>(EPylonImageFileFormat.ImageFileFormat_Bmp, arg_pathToFile, imgBuf, grabResult.PixelType, (uint)grabResult.SizeX, (uint)grabResult.SizeY, 0, EPylonImageOrientation.ImageOrientation_TopDown);
+
                 }
                 else if (grabResult.Status == EPylonGrabStatus.Failed)
                 {
