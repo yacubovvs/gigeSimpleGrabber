@@ -53,8 +53,8 @@ namespace SimpleGrab
                     deviceNum = di;
                     if (serial.Equals(args[0])) {
                         deviceFound = true;
+                        break;
                     }
-
                 }
 
                 if (!deviceFound) {
