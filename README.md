@@ -24,7 +24,7 @@ SimpleGrab.exe BMP 22846677 "C:\Users\v.yakubov\Documents\grabber\out.bmp"
 ```
 
 Feel free to use it for commercial purposes.
-Based on Pylon examples
+Based on Pylon examples.
 ____
 ### Русский
 Простая утилита для получения изображения с камер с интерфейсовм GigE (таких как Basler или Cognex) через командную строку.
@@ -48,6 +48,6 @@ SimpleGrab.exe BMP 22846677 "C:\Users\v.yakubov\Documents\grabber\out.bmp"
 ```
 
 Разрешено использование в коммерчиских целях.
-Основано на примерах Pylon
+Основано на примерах Pylon.
 ____
 
