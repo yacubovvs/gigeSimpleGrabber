@@ -14,7 +14,7 @@ Only for Windows 7 or above.
 Usage:
 ```
 SimpleGrab.exe [camera serial number] [patch to new png file]  
-SimpleGrab.exe [BMP|PNG|JPG|RAW|TIFF] [camera serial number] [patch to new png file]  
+SimpleGrab.exe [BMP|PNG|JPG|RAW|TIFF] [camera serial number] [patch to image file]  
 ```
 
 Example:
@@ -38,7 +38,7 @@ ____
 Использование:
 ```
 SimpleGrab.exe [серийный номер камеры] [путь к файлу]  
-SimpleGrab.exe [BMP|PNG|JPG|RAW|TIFF] [серийный номер камеры] [путь к файлу]   
+SimpleGrab.exe [BMP|PNG|JPG|RAW|TIFF] [серийный номер камеры] [путь к файлу картинки]   
 ```
 
 Пример:
