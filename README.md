@@ -31,6 +31,8 @@ SimpleGrab.exe -s 23348170 -o "C:\LayerAggregation\gigE_Grabber\temp\test.png" -
 
 Feel free to use it for commercial purposes.
 Based on Pylon examples.
+
+Project for Visual Studio 2019. Was tested in Windows 7 and Windows 10
 ____
 ### Русский
 Простая утилита для получения изображения с камер с интерфейсовм GigE (таких как Basler или Cognex) через командную строку.
@@ -61,5 +63,7 @@ SimpleGrab.exe -s 23348170 -o "C:\LayerAggregation\gigE_Grabber\temp\test.png" -
 
 Разрешено использование в коммерчиских целях.
 Основано на примерах Pylon.
+
+Проект для Visual Studio 2019. Был протестирован в Windows 7 и Windows 10
 ____
 
