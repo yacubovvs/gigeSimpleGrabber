@@ -12,3 +12,12 @@ C:\Users\v.yakubov\SimpleBaslerGraber\obj\Release\SimpleGrab.csprojAssemblyRefer
 C:\Users\v.yakubov\SimpleBaslerGraber\obj\Release\SimpleGrab.csproj.CopyComplete
 C:\Users\v.yakubov\SimpleBaslerGraber\obj\Release\SimpleGrab.exe
 C:\Users\v.yakubov\SimpleBaslerGraber\obj\Release\SimpleGrab.pdb
+C:\Users\User\source\repos\gigeSimpleGrabber\bin\Release\SimpleGrab.exe
+C:\Users\User\source\repos\gigeSimpleGrabber\bin\Release\SimpleGrab.pdb
+C:\Users\User\source\repos\gigeSimpleGrabber\bin\Release\PylonC.NET.dll
+C:\Users\User\source\repos\gigeSimpleGrabber\bin\Release\PylonC.NET.xml
+C:\Users\User\source\repos\gigeSimpleGrabber\obj\Release\SimpleGrab.csprojAssemblyReference.cache
+C:\Users\User\source\repos\gigeSimpleGrabber\obj\Release\SimpleGrab.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\gigeSimpleGrabber\obj\Release\SimpleGrab.csproj.CopyComplete
+C:\Users\User\source\repos\gigeSimpleGrabber\obj\Release\SimpleGrab.exe
+C:\Users\User\source\repos\gigeSimpleGrabber\obj\Release\SimpleGrab.pdb
