@@ -1,16 +1,4 @@
-/*
 
-This sample illustrates how to use the PylonDeviceGrabSingleFrame() convenience
-method for grabbing images in a loop. PylonDeviceGrabSingleFrame() grabs one
-single frame in single frame mode.
-
-Grabbing in single frame mode is the easiest way to grab images. Note: in single frame
-mode the maximum frame rate of the camera can't be achieved. The full frame
-rate can be achieved by setting the camera to the continuous frame
-mode and by grabbing in overlapped mode, i.e., image acquisition is done in parallel
-with image processing. This is illustrated in the OverlappedGrab sample program.
-
-*/
 
 using System;
 using System.Collections.Generic;
@@ -75,6 +63,8 @@ namespace SimpleGrab
                         break;
                 }
             }
+
+            //arg_exposureTime = "35000";
 
             bool error = false;
 
@@ -170,7 +160,7 @@ namespace SimpleGrab
                 }
 
                 hDev = Pylon.CreateDeviceByIndex(deviceNum);
-                Pylon.DeviceOpen(hDev, Pylon.cPylonAccessModeControl | Pylon.cPylonAccessModeStream);
+                Pylon.DeviceOpen(hDev, Pylon.cPylonAccessModeControl | Pylon.cPylonAccessModeStream | Pylon.cPylonAccessModeExclusive );
                 isAvail = Pylon.DeviceFeatureIsAvailable(hDev, "EnumEntry_PixelFormat_Mono8");
 
                 if (!isAvail)
@@ -220,10 +210,34 @@ namespace SimpleGrab
                     Pylon.DeviceSetIntegerFeature(hDev, "GevSCPSPacketSize", interPackageDelay);
                 }
 
+                Pylon.DeviceFeatureFromString(hDev, "ExposureAuto", "Off");
+
+                /*
                 isAvail = Pylon.DeviceFeatureIsWritable(hDev, "ExposureTimeRaw");
                 if (isAvail)
                 {
-                    Pylon.DeviceSetIntegerFeature(hDev, "ExposureTimeRaw", exposureTime);
+                    try
+                    {
+                        Pylon.DeviceSetFloatFeature(hDev, "ExposureTimeRaw", exposureTime);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Some error 1");
+                    }
+                }*/
+
+                
+                isAvail = Pylon.DeviceFeatureIsWritable(hDev, "ExposureTimeAbs");
+                if (isAvail)
+                {
+                    Pylon.DeviceSetFloatFeature(hDev, "ExposureTimeAbs", (long)exposureTime);
+                    /*
+                    try{
+                        Pylon.DeviceSetFloatFeature(hDev, "ExposureTimeAbs", (long)exposureTime);
+                    }catch (Exception e) {
+                        //Console.WriteLine("Some error 2");
+                    }
+                    */
                 }
 
                 Byte min, max;
