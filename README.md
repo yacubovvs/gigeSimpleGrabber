@@ -38,7 +38,7 @@ ____
 Простая утилита для получения изображения с камер с интерфейсовм GigE (таких как Basler или Cognex) через командную строку.
 
 Для настройки камер, используйте утилиту Pylon - https://www.baslerweb.com/ru/produkty/programmnoje-obespechenie/basler-pylon-camera-software-suite/
-Для запуска приложения необхоима установленная устилиа Pylon 6+ с пакетом разработчика и Net FrameWork 2.0
+Для запуска приложения необхоима установленная утилита Pylon 6+ с пакетом разработчика и Net FrameWork 2.0
 
 Уже собранная версия находится в папке bin/Release - https://github.com/yacubovvs/gigeSimpleGrabber/tree/master/bin/Release
 
