@@ -207,7 +207,7 @@ namespace SimpleGrab
                 
                 if (isAvail)
                 {
-                    Pylon.DeviceSetIntegerFeature(hDev, "GevSCPSPacketSize", interPackageDelay);
+                    Pylon.DeviceSetIntegerFeature(hDev, "GevSCPD", interPackageDelay);
                 }
 
                 Pylon.DeviceFeatureFromString(hDev, "ExposureAuto", "Off");
